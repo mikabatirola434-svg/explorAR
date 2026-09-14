@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ExplorAR - Argentina, un país para descubrir</title>
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon.ico">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,6 +14,7 @@
       <a href="index.html" class="logo">ExplorAR</a>
       <button class="menu-toggle" aria-label="Abrir menú">☰</button>
       <ul class="nav-links">
+        <li><a href="index.html" class="active">Inicio</a></li>
         <li><a href="destinos.html">Destinos</a></li>
         <li><a href="regiones.html">Regiones</a></li>
         <li><a href="experiencias.html">Experiencias</a></li>
@@ -32,23 +33,67 @@
     </section>
 
     <section class="intro">
-      <h2>¿Qué es ExplorAR?</h2>
-      <p><!-- acá va el texto de presentación --></p>
+      <div class="section-intro">
+        <h2>¿Qué es ExplorAR?</h2>
+        <p>ExplorAR es una guía turística digital pensada para descubrir Argentina de una forma distinta: por regiones, por tipo de experiencia y según lo que cada viajero busca. Reunimos destinos de todo el país para que planear el próximo viaje sea simple y, sobre todo, inspirador.</p>
+      </div>
     </section>
 
-    <section class="destacados">
+    <section class="alt">
       <h2>Destinos destacados</h2>
-      <!-- acá van 3 o 4 tarjetas de destinos -->
+      <div class="card-grid" id="destacados-grid">
+        <!-- se completa con JS -->
+      </div>
     </section>
 
-    <section class="regiones-preview">
+    <section>
       <h2>Regiones de Argentina</h2>
-      <!-- acá van las 5 regiones -->
+      <div class="card-grid">
+        <div class="card">
+          <img src="img/region-norte.jpg" alt="Paisaje del Norte argentino">
+          <div class="card-content">
+            <h3>Norte</h3>
+            <p>Quebradas de colores, cultura andina y pueblos con historia.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/region-cuyo.jpg" alt="Paisaje de la región de Cuyo">
+          <div class="card-content">
+            <h3>Cuyo</h3>
+            <p>Montaña, viñedos y paisajes desérticos al pie de los Andes.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/region-litoral.jpg" alt="Paisaje del Litoral argentino">
+          <div class="card-content">
+            <h3>Litoral</h3>
+            <p>Selva, ríos y una de las siete maravillas naturales del mundo.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/region-patagonia.jpg" alt="Paisaje de la Patagonia">
+          <div class="card-content">
+            <h3>Patagonia</h3>
+            <p>Lagos, glaciares y montañas al fin del mundo.</p>
+          </div>
+        </div>
+      </div>
+      <p style="text-align:center; margin-top:2rem;">
+        <a href="regiones.html" class="btn-secondary">Explorar regiones</a>
+      </p>
     </section>
 
-    <section class="experiencias-preview">
+    <section class="alt">
       <h2>Tipos de experiencias</h2>
-      <!-- acá van las categorías (playa, montaña, etc.) -->
+      <div class="card-grid">
+        <div class="card"><div class="card-content"><h3>🌊 Playas</h3><p>Costa atlántica y balnearios para desconectar.</p></div></div>
+        <div class="card"><div class="card-content"><h3>🏔️ Montaña</h3><p>Cerros, trekking y aire de altura.</p></div></div>
+        <div class="card"><div class="card-content"><h3>🍴 Gastronomía</h3><p>Vinos, asado y cocina regional.</p></div></div>
+        <div class="card"><div class="card-content"><h3>❄️ Nieve</h3><p>Centros de esquí y paisajes invernales.</p></div></div>
+      </div>
+      <p style="text-align:center; margin-top:2rem;">
+        <a href="experiencias.html" class="btn-secondary">Ver todas las experiencias</a>
+      </p>
     </section>
 
     <section class="cta">
@@ -59,14 +104,16 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 ExplorAR</p>
-    <div class="social-icons">
-      <a href="#" aria-label="Instagram">IG</a>
-      <a href="#" aria-label="YouTube">YT</a>
-      <a href="#" aria-label="TikTok">TT</a>
+    <p>&copy; 2026 ExplorAR — Proyecto escolar de Diseño Web</p>
+    <div class="footer-links">
+      <a href="privacidad.html">Política de Privacidad</a> ·
+      <a href="terminos.html">Términos y condiciones</a>
     </div>
   </footer>
+
+  <button id="volver-arriba" aria-label="Volver arriba">↑</button>
 
   <script src="script.js"></script>
 </body>
 </html>
+
