@@ -15,7 +15,7 @@ const destinos = [
     descripcion: "Un conjunto de saltos rodeado de selva, con pasarelas que te llevan hasta la Garganta del Diablo.",
     tipo_experiencia: "Naturaleza",
     mejor_epoca: "Otoño y primavera",
-    imagen: "img/destino-iguazu.jpg",
+    imagen: "img/cataratas.png",
     destacado: true
   },
   {
@@ -149,9 +149,8 @@ function crearTarjeta(destino) {
       <img src="${destino.imagen}" alt="${destino.nombre}, ${destino.provincia}">
       <div class="card-content">
         <h3>${destino.nombre}</h3>
-        <p>${destino.provincia} · ${destino.region}</p>
-        <p>${destino.descripcion}</p>
-        <p>Mejor época: ${destino.mejor_epoca}</p>
+        <p class="card-provincia">${destino.provincia}</p>
+        <p class="card-descripcion">${destino.descripcion}</p>
       </div>
     </div>
   `;
