@@ -20,7 +20,7 @@ const destinos = [
   },
   {
     id: 2,
-    nombre: "Quebrada de Humahuaca",
+    nombre: "Cerro de los Siete Colores",
     provincia: "Jujuy",
     region: "Norte",
     descripcion: "Un valle con montañas de muchos colores y pueblos antiguos donde todavia mantienen vivas sus tradiciones.",

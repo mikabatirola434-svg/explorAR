@@ -1,10 +1,7 @@
 /* =========================================================
    EXPLORAR - style.css
-   Estética: fondos translúcidos tipo "vidrio", burbujas de
-   color y esquinas muy redondeadas.
    ========================================================= */
 
-/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -24,8 +21,7 @@ body {
   position: relative;
 }
 
-/* Burbujas de color detrás de todo el sitio.
-   Sirven para que el efecto "vidrio" de las tarjetas se note. */
+/* Burbujas de color detrás de todo el sitio. Sirven para que el efecto "vidrio" de las tarjetas se note. */
 body::before {
   content: "";
   position: fixed;
@@ -69,7 +65,6 @@ button {
   --text-dark: #1C2B33;
   --text-light: #FFFFFF;
 
-  /* Estilo "vidrio" */
   --vidrio: rgba(255, 255, 255, 0.55);
   --vidrio-fuerte: rgba(255, 255, 255, 0.75);
   --vidrio-borde: rgba(255, 255, 255, 0.85);
@@ -78,7 +73,6 @@ button {
   --radio-medio: 24px;
 }
 
-/* ===== TIPOGRAFIA BASE ===== */
 h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
@@ -94,7 +88,7 @@ p {
   color: var(--text-dark);
 }
 
-/* ===== BOTONES (se mantienen igual que antes) ===== */
+/* ===== BOTONES ===== */
 .btn-primary {
   display: inline-block;
   background-color: var(--naranja-acento);
@@ -132,7 +126,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   outline-offset: 2px;
 }
 
-/* ===== HEADER / NAV (cápsula flotante) ===== */
+/* ===== HEADER / NAV ===== */
 header {
   position: sticky;
   top: 12px;
@@ -251,14 +245,12 @@ footer p { color: var(--text-light); }
 
 .footer-links a { text-decoration: underline; margin: 0 0.4rem; }
 
-/* ===== SECCIONES GENERALES ===== */
 main section {
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Sección "vidrio": panel translúcido redondeado */
 main section.alt {
   background: var(--vidrio);
   backdrop-filter: blur(16px);
@@ -278,8 +270,6 @@ main section h2 { text-align: center; margin-bottom: 2.5rem; }
   text-align: center;
 }
 
-/* ===== HERO ===== */
-/* "main section.hero" para ganarle a "main section" en especificidad */
 main section.hero {
   width: calc(100% - 2rem);
   margin: 1.2rem auto 0;
@@ -311,7 +301,7 @@ main section.page-hero {
 .page-hero h1 { color: var(--text-light); font-weight: 500; }
 .page-hero p { color: var(--text-light); }
 
-/* ===== TARJETAS (vidrio) ===== */
+/* ===== TARJETAS ===== */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -340,27 +330,19 @@ main section.page-hero {
 
 .card-content h3 { color: var(--azul-profundo); margin-bottom: 0.3rem; line-height: 1.3; }
 
-/* CAMBIO: antes era "font-size: 0.9rem; flex: 1;" y el flex:1 estiraba
-   todos los párrafos y los separaba de forma despareja */
 .card-content p { font-size: 0.9rem; }
 
-/* NUEVO: la provincia, en negrita y con aire alrededor */
+/* La provincia en negrita*/
 .card-content .card-provincia {
   font-weight: 700;
   margin-bottom: 0.8rem;
 }
 
-/* NUEVO: el resumen, con más interlineado y cortado a 3 líneas */
+
 .card-content .card-descripcion {
   flex: 1;
   line-height: 1.7;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
-
 .card-meta {
   font-size: 0.8rem;
   color: #2A7BA8;
@@ -376,27 +358,7 @@ main section.page-hero {
   padding: 0.5rem 1.1rem;
 }
 
-/* Botón de favorito: burbuja de vidrio sobre la foto */
-.fav-btn {
-  position: absolute;
-  top: 0.7rem;
-  right: 0.7rem;
-  z-index: 2;
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid var(--vidrio-borde);
-  border-radius: 50%;
-  font-size: 1.15rem;
-  color: var(--azul-profundo);
-}
 
-/* ===== CTA FINAL ===== */
 main section.cta {
   width: calc(100% - 2rem);
   margin: 1.5rem auto 0;
@@ -709,7 +671,6 @@ main section.cta {
   object-fit: cover;
 }
 
-/* ===== RESPALDO si el navegador no soporta backdrop-filter ===== */
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   :root {
     --vidrio: rgba(255, 255, 255, 0.85);
@@ -717,7 +678,6 @@ main section.cta {
   }
 }
 
-/* ===== MOVIMIENTO REDUCIDO (accesibilidad) ===== */
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }
 }
