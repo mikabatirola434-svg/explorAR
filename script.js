@@ -26,7 +26,7 @@ const destinos = [
     descripcion: "Un valle con montañas de muchos colores y pueblos antiguos donde todavia mantienen vivas sus tradiciones.",
     tipo_experiencia: "Cultura",
     mejor_epoca: "Abril a octubre",
-    imagen: "img/destino-humahuaca.jpg",
+    imagen: "img/destino-humahuaca.png",
     destacado: true
   },
   {
@@ -37,7 +37,7 @@ const destinos = [
     descripcion: "Rodeado de montañas rojizas y grandes viñedos, se destaca por sus paisajes y por el Torrontés, el vino blanco tipico de la región.",
     tipo_experiencia: "Gastronomía",
     mejor_epoca: "Otoño y primavera",
-    imagen: "img/destino-cafayate.jpg",
+    imagen: "img/destino-cafayate.png",
     destacado: false
   },
   {
@@ -48,7 +48,7 @@ const destinos = [
     descripcion: "Bodegas, degustaciones y la Cordillera de fondo, con la cosecha como gran época del año.",
     tipo_experiencia: "Gastronomía",
     mejor_epoca: "Febrero a abril",
-    imagen: "img/destino-mendoza.jpg",
+    imagen: "img/destino-mendoza.png",
     destacado: true
   },
   {
@@ -59,7 +59,7 @@ const destinos = [
     descripcion: "Caminatas de montaña con vista al cerro más alto de América.",
     tipo_experiencia: "Montaña",
     mejor_epoca: "Diciembre a marzo",
-    imagen: "img/destino-aconcagua.jpg",
+    imagen: "img/destino-aconcagua.png",
     destacado: false
   },
   {
@@ -70,7 +70,7 @@ const destinos = [
     descripcion: "Formaciones rocosas que parecen un paisaje lunar y un importante tesoro de fósiles.",
     tipo_experiencia: "Naturaleza",
     mejor_epoca: "Abril a octubre",
-    imagen: "img/destino-ischigualasto.jpg",
+    imagen: "img/destino-ischigualasto.png",
     destacado: false
   },
   {
@@ -81,7 +81,7 @@ const destinos = [
     descripcion: "Lagos, bosques y cerros nevados, con esquí en invierno y chocolate durante todo el año.",
     tipo_experiencia: "Nieve",
     mejor_epoca: "Julio a septiembre",
-    imagen: "img/destino-bariloche.jpg",
+    imagen: "img/destino-bariloche.png",
     destacado: false
   },
   {
@@ -92,7 +92,7 @@ const destinos = [
     descripcion: "Un enorme muro de hielo que se ve puede observar de cerca desde las pasarelas del parque.",
     tipo_experiencia: "Naturaleza",
     mejor_epoca: "Octubre a abril",
-    imagen: "img/destino-perito-moreno.jpg",
+    imagen: "img/destino-perito-moreno.png",
     destacado: true
   },
   {
@@ -103,7 +103,7 @@ const destinos = [
     descripcion: "La ciudad más austral del mundo, rodeada de montañas, el canal Beagle y el fin del mundo.",
     tipo_experiencia: "Montaña",
     mejor_epoca: "Diciembre a marzo",
-    imagen: "img/destino-ushuaia.jpg",
+    imagen: "img/destino-ushuaia.png",
     destacado: false
   },
   {
@@ -114,7 +114,7 @@ const destinos = [
     descripcion: "Fauna marina que se puede observar de cerca: ballenas, lobos marinos y pingüinos en la costa.",
     tipo_experiencia: "Naturaleza",
     mejor_epoca: "Junio a diciembre",
-    imagen: "img/destino-valdes.jpg",
+    imagen: "img/destino-valdes.png",
     destacado: false
   },
   {
@@ -125,7 +125,7 @@ const destinos = [
     descripcion: "La clásica ciudad balnearia argentina, con playas, rambla y mucha actividad durante el verano.",
     tipo_experiencia: "Playas",
     mejor_epoca: "Diciembre a marzo",
-    imagen: "img/destino-mar-del-plata.jpg",
+    imagen: "img/destino-mar-del-plata.png",
     destacado: false
   },
   {
@@ -136,7 +136,7 @@ const destinos = [
     descripcion: "Teatros, cafés, museos y barrios con identidad propia para recorrer y conocer.",
     tipo_experiencia: "Cultura",
     mejor_epoca: "Marzo a mayo y septiembre a noviembre",
-    imagen: "img/destino-buenos-aires.jpg",
+    imagen: "img/destino-buenos-aires.png",
     destacado: false
   }
 ];
