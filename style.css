@@ -154,7 +154,26 @@ nav {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
+
+.logo-icono {
+  width: 38px;
+  height: 38px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo-icono img { width: 22px; height: auto; }
+
+.logo-texto { font-weight: 700; }
+.logo-texto span { color: #9AD3F2; }
 
 .nav-links {
   display: flex;
