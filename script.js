@@ -256,3 +256,30 @@ function mostrarDestinos(lista) {
 if (destinosGrid) {
   mostrarDestinos(destinos);
 }
+
+const buscador = document.getElementById('buscador');
+
+function normalizar(texto) {
+  return texto.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+function filtrarDestinos() {
+  const termino = normalizar(buscador.value.trim());
+
+  const resultados = destinos.filter(d =>
+    normalizar(d.nombre).includes(termino) ||
+    normalizar(d.provincia).includes(termino) ||
+    normalizar(d.region).includes(termino) ||
+    normalizar(d.descripcion).includes(termino)
+  );
+
+  if (resultados.length === 0) {
+    destinosGrid.innerHTML = '<p class="no-resultados">No encontramos destinos con esa búsqueda.</p>';
+  } else {
+    mostrarDestinos(resultados);
+  }
+}
+
+if (buscador && destinosGrid) {
+  buscador.addEventListener('input', filtrarDestinos);
+}
