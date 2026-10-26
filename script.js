@@ -13,7 +13,7 @@ const destinos = [
     provincia: "Buenos Aires",
     region: "Centro",
     descripcion: "La clásica ciudad balnearia argentina, con playas, rambla y mucha actividad durante el verano.",
-    tipo_experiencia: "Playas",
+    tipos_experiencia: ["Playas", "Familiar"],
     imagen: "img/destino-mar-del-plata.png",
   },
   {
@@ -22,7 +22,7 @@ const destinos = [
     provincia: "Catamarca",
     region: "Norte",
     descripcion: "Un gigantesco e impactante 'mar' de bloques de roca volcánica blanca tallados por el viento.",
-    tipo_experiencia: "Aventura",
+    tipos_experiencia: "Aventura",
     imagen: "img/campo-piedrapomez.png",
   },
    {
@@ -31,7 +31,7 @@ const destinos = [
     provincia: "Chaco",
     region: "Litoral",
     descripcion: "Un denso monte de quebrachos centenarios y lagunas que resguarda monos carayá, tapires y aves nativas.",
-    tipo_experiencia: "Naturaleza",
+    tipos_experiencia: ["Naturaleza", "Relax"],
     imagen: "img/parquechaco.png",
   },
     {
@@ -40,7 +40,7 @@ const destinos = [
     provincia: "Chubut",
     region: "Patagonia",
     descripcion: "Fauna marina que se puede observar de cerca: ballenas, lobos marinos y pingüinos en la costa.",
-    tipo_experiencia: "Naturaleza",
+    tipos_experiencia: "Naturaleza",
     imagen: "img/destino-valdes.png",
   },
   {
@@ -49,7 +49,7 @@ const destinos = [
     provincia: "Ciudad Autónoma de Buenos Aires",
     region: "Centro",
     descripcion: "Teatros, cafés, museos y barrios con identidad propia para recorrer y conocer.",
-    tipo_experiencia: "Cultura",
+    tipos_experiencia: ["Gastronomía", "Familiar"],
     imagen: "img/destino-buenos-aires.png",
   },
   {
@@ -58,7 +58,7 @@ const destinos = [
     provincia: "Córdoba",
     region: "Centro",
     descripcion: "Una vibrante ciudad a orillas de un lago, rodeada de sierras, teatros y entretenimiento veraniego.",
-    tipo_experiencia: "Cultura",
+    tipos_experiencia: ["Gastronomía", "Familiar"],
     imagen: "img/carlospaz.png",
   },
   {
@@ -67,7 +67,7 @@ const destinos = [
     provincia: "Corrientes",
     region: "Norte",
     descripcion: "Un inmenso humedal protegido ideal para navegar y ver yacarés, carpinchos y cientos de aves de cerca.",
-    tipo_experiencia: "Naturaleza",
+    tipos_experiencia: "Naturaleza",
     imagen: "img/ibera.png",
   },
    {
@@ -76,7 +76,7 @@ const destinos = [
     provincia: "Entre Ríos",
     region: "Litoral",
     descripcion: "Un complejo de piletas con aguas relajantes a orillas de un lago, ideal para el descanso familiar.",
-    tipo_experiencia: "Familiar",
+    tipos_experiencia: "Familiar",
     imagen: "img/termas.png",
   },
   {
@@ -85,7 +85,7 @@ const destinos = [
     provincia: "Formosa",
     region: "Litoral",
     descripcion: "Un enorme humedal donde árboles inundados y cubiertos de enredaderas crean un paisaje acuático único.",
-    tipo_experiencia: "Naturaleza",
+    tipos_experiencia: "Naturaleza",
     imagen: "img/bañadolaestrella.png",
   },
   {
@@ -94,7 +94,7 @@ const destinos = [
     provincia: "Jujuy",
     region: "Norte",
     descripcion: "Un valle con montañas de muchos colores y pueblos antiguos donde todavia mantienen vivas sus tradiciones.",
-    tipo_experiencia: "Cultura",
+    tipos_experiencia: ["Montaña", "Aventura"],
     imagen: "img/destino-humahuaca.png",
   },
   {
@@ -103,7 +103,7 @@ const destinos = [
     provincia: "La Pampa",
     region: "Pampeana",
     descripcion: "Un oasis de serranías bajas con pinturas rupestres y fauna nativa como guanacos en medio de la llanura.",
-    tipo_experiencia: "Naturaleza",
+    tipos_experiencia: ["Aventura", "Relax"],
     imagen: "img/lihuelcalel.png",
   },
   {
@@ -112,7 +112,7 @@ const destinos = [
     provincia: "La Rioja",
     region: "Norte",
     descripcion: "Un imponente cañón de altísimas paredes rocosas rojas con petroglifos antiguos y geoformas esculpidas.",
-    tipo_experiencia: "Naturaleza",
+    tipos_experiencia: ["Aventura", "Naturaleza"],
     imagen: "img/talampaya.png",
   },
     {
@@ -121,7 +121,7 @@ const destinos = [
     provincia: "Mendoza",
     region: "Cuyo",
     descripcion: "Bodegas, degustaciones y la Cordillera de fondo, con la cosecha como gran época del año.",
-    tipo_experiencia: "Gastronomía",
+    tipos_experiencia: "Gastronomía",
     imagen: "img/destino-mendoza.png",
   },
   {
@@ -130,7 +130,7 @@ const destinos = [
     provincia: "Mendoza",
     region: "Cuyo",
     descripcion: "Caminatas de montaña con vista al cerro más alto de América.",
-    tipo_experiencia: "Montaña",
+    tipos_experiencia: "Montaña",
     imagen: "img/destino-aconcagua.png",
   },
   {
@@ -139,7 +139,7 @@ const destinos = [
     provincia: "Misiones",
     region: "Litoral",
     descripcion: "Un conjunto de cataratas en medio de la selva, con pasarelas que te llevan hasta la Garganta del Diablo.",
-    tipo_experiencia: "Naturaleza",
+    tipos_experiencia: "Naturaleza",
     imagen: "img/cataratas.png",
   },
   {
@@ -148,7 +148,7 @@ const destinos = [
     provincia: "Neuquén",
     region: "Patagonia",
     descripcion: "Un pueblo de montaña de madera y piedra a orillas del Lago Lácar y la Ruta de los Siete Lagos.",
-    tipo_experiencia: "Naturaleza",
+    tipos_experiencia: "Naturaleza",
     imagen: "img/losandes.png",
   },
   {
@@ -157,7 +157,7 @@ const destinos = [
     provincia: "Río Negro",
     region: "Patagonia",
     descripcion: "Lagos, bosques y cerros nevados, con esquí en invierno y chocolate durante todo el año.",
-    tipo_experiencia: "Nieve",
+    tipos_experiencia: ["Nieve", "Montaña"],
     imagen: "img/destino-bariloche.png",
   },
   {
@@ -166,7 +166,7 @@ const destinos = [
     provincia: "Salta",
     region: "Norte",
     descripcion: "Rodeado de montañas rojizas y grandes viñedos, se destaca por sus paisajes y por el Torrontés, el vino blanco tipico de la región.",
-    tipo_experiencia: "Gastronomía",
+    tipos_experiencia: ["Gastronomía", "Naturaleza"],
     imagen: "img/destino-cafayate.png",
   },
   {
@@ -175,7 +175,7 @@ const destinos = [
     provincia: "San Juan",
     region: "Cuyo",
     descripcion: "Formaciones rocosas que parecen un paisaje lunar y un importante tesoro de fósiles.",
-    tipo_experiencia: "Naturaleza",
+    tipos_experiencia: "Naturaleza",
     imagen: "img/destino-ischigualasto.png",
   },
    {
@@ -184,7 +184,7 @@ const destinos = [
     provincia: "San Luis",
     region: "Cuyo",
     descripcion: "Una villa serrana famosa en el mundo por su microclima de alta calidad y senderos naturales.",
-    tipo_experiencia: "Naturaleza",
+    tipos_experiencia: ["Naturaleza", "Montaña"],
     imagen: "img/merlo.png",
   },
   {
@@ -193,7 +193,7 @@ const destinos = [
     provincia: "Santa Cruz",
     region: "Patagonia",
     descripcion: "Un enorme muro de hielo que se ve puede observar de cerca desde las pasarelas del parque.",
-    tipo_experiencia: "Naturaleza",
+    tipos_experiencia: "Naturaleza",
     imagen: "img/destino-perito-moreno.png",
   },
   {
@@ -202,7 +202,7 @@ const destinos = [
     provincia: "Santa Fe",
     region: "Centro",
     descripcion: "Una imponente torre de piedra junto al río Paraná que conmemora el sitio donde se izó la bandera nacional..",
-    tipo_experiencia: "Cultura",
+    tipos_experiencia: "Familiar",
     imagen: "img/rosario.png",
   },
   {
@@ -211,7 +211,7 @@ const destinos = [
     provincia: "Santiago del Estero",
     region: "Norte",
     descripcion: "Una gran ciudad-spa asentada sobre aguas termales curativas que combina relax y automovilismo.",
-    tipo_experiencia: "Relax",
+    tipos_experiencia: ["Relax", "Familiar"],
     imagen: "img/termasriohondo.png",
   },
   {
@@ -220,7 +220,7 @@ const destinos = [
     provincia: "Tierra del Fuego",
     region: "Patagonia",
     descripcion: "La ciudad más austral del mundo, rodeada de montañas, el canal Beagle y el fin del mundo.",
-    tipo_experiencia: "Montaña",
+    tipos_experiencia: ["Montaña", "Nieve"],
     imagen: "img/destino-ushuaia.png",
   },
     {
@@ -229,7 +229,7 @@ const destinos = [
     provincia: "Tucumán",
     region: "Norte",
     descripcion: "Un verde oasis de montaña ideal para disfrutar de paisajes folclóricos y quesos artesanales.",
-    tipo_experiencia: "Naturaleza",
+    tipos_experiencia: ["Gastronomía", "Naturaleza"],
     imagen: "img/tucuman.png",
   }
 ];
@@ -282,4 +282,35 @@ function filtrarDestinos() {
 
 if (buscador && destinosGrid) {
   buscador.addEventListener('input', filtrarDestinos);
+}
+
+const experienciasGrid = document.getElementById('experiencias-grid');
+const experienciaTabs = document.getElementById('experiencia-tabs');
+
+function mostrarExperiencias(tipo) {
+  const lista = tipo === 'Todas'
+    ? destinos
+        : destinos.filter(d => d.tipos_experiencia.includes(tipo));
+
+  experienciasGrid.innerHTML = lista.map(crearTarjeta).join('');
+}
+
+if (experienciasGrid && experienciaTabs) {
+    const tipos = ['Todas', ...new Set(destinos.flatMap(d => d.tipos_experiencia))];
+
+  experienciaTabs.innerHTML = tipos
+    .map(t => `<button class="tab-btn" data-tipo="${t}">${t}</button>`)
+    .join('');
+
+  experienciaTabs.addEventListener('click', (e) => {
+    const boton = e.target.closest('.tab-btn');
+    if (!boton) return;
+
+    experienciaTabs.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    boton.classList.add('active');
+    mostrarExperiencias(boton.dataset.tipo);
+  });
+
+  experienciaTabs.querySelector('.tab-btn').classList.add('active');
+  mostrarExperiencias('Todas');
 }

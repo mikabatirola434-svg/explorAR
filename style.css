@@ -702,6 +702,7 @@ main section.cta {
   * { transition: none !important; scroll-behavior: auto !important; }
 }
 
-#destinos-grid {
+#destinos-grid,
+#experiencias-grid {
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
