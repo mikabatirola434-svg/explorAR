@@ -706,3 +706,28 @@ main section.cta {
 #experiencias-grid {
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
+
+/* Franja de datos al pie de la tarjeta de experiencias */
+.card-datos {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(27, 73, 101, 0.15);
+}
+
+.card-datos div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.card-datos span {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.card-datos strong {
+  font-size: 0.9rem;
+  color: var(--azul-profundo);
+}

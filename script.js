@@ -233,6 +233,88 @@ const destinos = [
     imagen: "img/tucuman.png",
   }
 ];
+const experiencias = [
+  {
+    id: 1,
+    nombre: "Trekking al Aconcagua",
+    destino_id: 14,
+    tipo: "Aventura",
+    dificultad: "Alta",
+    duracion: "Varios días",
+    mejor_epoca: "Diciembre a marzo",
+    descripcion: "Una expedición de montaña para quienes buscan un desafío real."
+  },
+  {
+    id: 2,
+    nombre: "Degustación de vinos en Cafayate",
+    destino_id: 18,
+    tipo: "Gastronomía",
+    dificultad: "Baja",
+    duracion: "Medio día",
+    mejor_epoca: "Otoño y primavera",
+    descripcion: "Un recorrido por bodegas de altura para probar el torrontés."
+  },
+  {
+    id: 3,
+    nombre: "Avistaje de ballenas",
+    destino_id: 4,
+    tipo: "Naturaleza",
+    dificultad: "Baja",
+    duracion: "2 horas",
+    mejor_epoca: "Junio a diciembre",
+    descripcion: "Una salida en barco para ver ballenas francas de cerca."
+  },
+  {
+    id: 4,
+    nombre: "Navegación al glaciar",
+    destino_id: 21,
+    tipo: "Naturaleza",
+    dificultad: "Baja",
+    duracion: "1 hora",
+    mejor_epoca: "Octubre a abril",
+    descripcion: "Un paseo en barco frente a la pared de hielo del Perito Moreno."
+  },
+  {
+    id: 5,
+    nombre: "Esquí en el cerro",
+    destino_id: 17,
+    tipo: "Nieve",
+    dificultad: "Media",
+    duracion: "Día completo",
+    mejor_epoca: "Julio a septiembre",
+    descripcion: "Pistas para todos los niveles con vista a los lagos."
+  },
+  {
+    id: 6,
+    nombre: "Pasarelas de la Garganta del Diablo",
+    destino_id: 15,
+    tipo: "Naturaleza",
+    dificultad: "Baja",
+    duracion: "3 horas",
+    mejor_epoca: "Otoño y primavera",
+    descripcion: "Una caminata entre selva hasta el salto más impresionante del parque."
+  },
+  {
+    id: 7,
+    nombre: "Recorrido por la Quebrada",
+    destino_id: 10,
+    tipo: "Cultura",
+    dificultad: "Baja",
+    duracion: "Día completo",
+    mejor_epoca: "Abril a octubre",
+    descripcion: "Pueblos andinos, mercados y cerros de colores en un solo día."
+  },
+  {
+    id: 8,
+    nombre: "Excursión a Ischigualasto",
+    destino_id: 19,
+    tipo: "Aventura",
+    dificultad: "Media",
+    duracion: "Medio día",
+    mejor_epoca: "Abril a octubre",
+    descripcion: "Un recorrido en vehículo por un paisaje de rocas que parece lunar."
+  }
+];
 
 const destinosGrid = document.getElementById('destinos-grid');
 
@@ -287,16 +369,46 @@ if (buscador && destinosGrid) {
 const experienciasGrid = document.getElementById('experiencias-grid');
 const experienciaTabs = document.getElementById('experiencia-tabs');
 
+function crearTarjetaExperiencia(exp) {
+  const destino = destinos.find(d => d.id === exp.destino_id);
+
+  if (!destino) {
+    console.warn('No existe un destino con id', exp.destino_id, 'para', exp.nombre);
+    return '';
+  }
+
+  return `
+    <div class="card">
+      <img src="${destino.imagen}" alt="${exp.nombre}, ${destino.nombre}">
+      <div class="card-content">
+        <h3>${exp.nombre}</h3>
+        <p class="card-provincia">${destino.nombre}, ${destino.provincia}</p>
+        <p class="card-descripcion">${exp.descripcion}</p>
+        <div class="card-datos">
+          <div>
+            <span>Duración</span>
+            <strong>${exp.duracion}</strong>
+          </div>
+          <div>
+            <span>Mejor época</span>
+            <strong>${exp.mejor_epoca}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 function mostrarExperiencias(tipo) {
   const lista = tipo === 'Todas'
-    ? destinos
-        : destinos.filter(d => d.tipos_experiencia.includes(tipo));
+    ? experiencias
+    : experiencias.filter(e => e.tipo === tipo);
 
-  experienciasGrid.innerHTML = lista.map(crearTarjeta).join('');
+  experienciasGrid.innerHTML = lista.map(crearTarjetaExperiencia).join('');
 }
 
 if (experienciasGrid && experienciaTabs) {
-    const tipos = ['Todas', ...new Set(destinos.flatMap(d => d.tipos_experiencia))];
+  const tipos = ['Todas', ...new Set(experiencias.map(e => e.tipo))];
 
   experienciaTabs.innerHTML = tipos
     .map(t => `<button class="tab-btn" data-tipo="${t}">${t}</button>`)
